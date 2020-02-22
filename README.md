@@ -41,4 +41,4 @@ This is the first virus i've done. Virus branch are so interesting. Next virus i
 # TO DO
 - The code is only written in C i have obiouslly to write it in ASM x64
 - Some Makefile
-- Project is not readdy to be corrected i just wanna understand howw to do it
+- Project is not readdy to be corrected i've just wanted to understand how to do it
