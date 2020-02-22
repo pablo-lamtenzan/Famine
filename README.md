@@ -2,7 +2,7 @@
 This project consist to create a simple virus. Famine is an executable file than will infect all other binaries in the target folders appending itself ,so adding new functionalities to target binaries.
 
 # This project has educationals purposes only
-This a self replicating virus with a non malicious code source, but malicous code can be added to Famine.
+This is a self replicating virus with a non malicious code source, but malicous code can be added to Famine.
 This proyect was done for educational purposes only, i disclaim the responsability if it used for malicous purposes.
 
 # Specifications
