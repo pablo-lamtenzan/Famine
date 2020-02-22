@@ -10,7 +10,7 @@ This proyect was done for educational purposes only, i disclaim the responsabili
 - The signature is: "Famine version 1.0 (c)oded by plamtenz-xxxxxxxx".
 - The target folders by default are "/tmp/test/" and "/tmp/test2".
 - Famine must infect once each binary.
-- Famine has no return, takes no arguments and obiouslly never crash or warning.
+- Famine has no return, takes no arguments and obiouslly never crash or make warnings.
 - The target environement is Linux x64_86 GNU/Linux (only 64 bits architecture).
 
 # How it works ?
@@ -39,4 +39,6 @@ Famine is a very simple virus, a sumary of its architecture is :
 This is the first virus i've done. Virus branch are so interesting. Next virus is called Pestilence, it will be takes famine's code but will be indetectable.
 
 # TO DO
-The code is only written in C i have obiouslly to write it in ASM x64
+- The code is only written in C i have obiouslly to write it in ASM x64
+- Some Makefile
+- Project is not readdy to be corrected i just wanna understand howw to do it
