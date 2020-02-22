@@ -33,7 +33,7 @@ Famine is a very simple virus, a sumary of its architecture is :
 10) No space ? Modify offsets of program, segment and folowing sections, add padding respecting the page size align.
 11) Re-write the file adding famines code now is known that there are enought space and offset are shifted.
 12) Add padding ultil page size.
-13) Famine readdy to infect ! Have a nice day.
+13) Famine is readdy to infect ! Have a nice day.
 
 # About the project
 This is the first virus i've done. Virus branch are so interesting. Next virus is called Pestilence, it will be takes famine's code but will be undetectable.
