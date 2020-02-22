@@ -36,7 +36,7 @@ Famine is a very simple virus, a sumary of its architecture is :
 13) Famine readdy to infect ! Have a nice day.
 
 # About the project
-This is the first virus i've done. Virus branch are so interesting. Next virus is called Pestilence, it will be takes famine's code but will be indetectable.
+This is the first virus i've done. Virus branch are so interesting. Next virus is called Pestilence, it will be takes famine's code but will be undetectable.
 
 # TO DO
 - The code is only written in C i have obiouslly to write it in ASM x64
