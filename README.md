@@ -29,7 +29,7 @@ Famine is a very simple virus, a sumary of its architecture is :
 6) Check if the file is alreaddy infected
 7) If not, save offset addr where code will be writed and the original entry point
 8) Find the new entry point
-9) Check if there are enought room space to write the code in .TEXT. If space skip 10)
+9) Check if there are enought room space to write the code in .TEXT. If space skip 10.
 10) No space ? Modify offsets of program, segment and folowing sections, add padding respecting the page size align.
 11) Re-write the file adding famines code now is known that there are enought space and offset are shifted.
 12) Add padding ultil page size.
